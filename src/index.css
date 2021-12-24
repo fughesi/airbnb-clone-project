@@ -1,0 +1,49 @@
+/*********
+ VARIABLES 
+ *********/
+ :root {
+   /* color */
+   --white: #ffffff;
+   --grey: #918e9b;
+   --dark: #222222;
+   --accent: #fe395c;
+
+   /* sizes */
+   --tiny: .64rem;
+   --small: .75rem;
+   --normal: 1rem;
+   --large: 2.25rem;
+  }
+
+/*******
+ GENERAL 
+ *******/
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Poppins', sans-serif;
+  }
+  #container {
+    min-height: 100vh;
+    display: grid;
+    grid-template: 70px 2fr .75fr 2.5fr / 1fr ;
+  }
+
+/******
+NAVBAR 
+******/
+  #navContainer {
+    display: flex;
+    box-shadow: 0 0 10px var(--grey);
+  }
+  #navContainer img {
+    margin: 0 0 0 30px;
+    height: 35%;
+    align-self: center;
+  }
