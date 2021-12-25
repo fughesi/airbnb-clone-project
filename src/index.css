@@ -44,6 +44,7 @@ NAVBAR
   }
   #navContainer img {
     margin: 0 0 0 30px;
+    max-width: 100px;
     height: 35%;
     align-self: center;
   }
