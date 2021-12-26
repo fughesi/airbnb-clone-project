@@ -36,7 +36,7 @@
   #container {
     min-height: 100vh;
     display: grid;
-    grid-template: 70px 2fr .75fr 2.5fr / 1fr ;
+    grid-template: 70px auto auto auto / 1fr ;
   }
 
 /******
