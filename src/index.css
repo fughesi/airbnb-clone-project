@@ -36,12 +36,12 @@
   #container {
     min-height: 100vh;
     display: grid;
-    grid-template: 70px auto auto auto / 1fr ;
+    grid-template: 70px 2fr 1fr / 1fr ;
   }
 
 /******
-NAVBAR 
-******/
+  NAVBAR 
+  ******/
   #navContainer {
     display: flex;
     box-shadow: 0 0 10px var(--grey);
@@ -53,29 +53,22 @@ NAVBAR
     align-self: center;
   }
 
-  /************
-   HERO SECTION 
-   ************/
+/************
+  HERO SECTION 
+  ************/
   #heroContainer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    display: grid;  
-    grid-template: 2fr auto auto / 5% 90% 5%;
-    grid-template-areas: 
-      "a a a"
-      ". b b"
-      ". c c";
-
   }
   #heroContainer img {
-    justify-self: center;
-    grid-area: a;
+    place-self: center;
     padding: 30px;
     max-width: 70%;
     height: 90%;
   }
   #heroContainer h3 {
     margin: 0 0 0 100px;
-    grid-area: b;
 
     font-size: var(--large);
     font-weight: var(--semiBold);
@@ -83,18 +76,35 @@ NAVBAR
   #heroContainer p {
     margin: 0 0 0 100px;
     max-width: 450px;
-    grid-area: c;
     font-size: var(--normal);
   }
 
-  /*****
-   CARDS 
-   *****/
+/*****
+  CARDS 
+  *****/
   #cardContainer {
+    display: flex;
+    margin: 0 20px;
+    flex-shrink: 0;
+
     position: relative;
     width: 176px;
   }
+  #cardFlex {
+    display: flex;
+    flex-direction: column;
+  }
+  section#carousel {
+    display: flex;
+    justify-content: right;
+    overflow: scroll;
+
+    margin: 35px 0;
+
+  }
   #cardContainer img {
+    width: 176px;
+    height: 235px;
     border-radius: 10px;
     width: 100%;
   }
@@ -114,8 +124,9 @@ NAVBAR
     font-size: var(--tiny);
     background: var(--white);
   }
-  #cardText img {
+  #cardText p img {
     width: 14px;
+    height: 14px;
   }
   #cardText span:nth-child(2) {
     color: var(--grey);
